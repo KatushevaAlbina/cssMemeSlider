@@ -20,6 +20,7 @@ body {
     height: 45rem;
     margin: 0 auto;
     overflow: hidden;
+    
 }
 
 .slide-image { /*Окошко с одним слайдом*/
@@ -27,7 +28,7 @@ body {
     width: 45rem;
     overflow: hidden;
     margin: 0 auto;
-    transition: all .6s ease; 
+    transition: all, .6s ease; 
 }
 
 
@@ -46,7 +47,7 @@ body {
     border: 0,625rem solid #fff;
     border-radius: 1.25rem;
     margin-top: 7%;
-    transition: all .6s ease; 
+    transition: all, .6s ease; 
 }
 
 
@@ -55,8 +56,8 @@ input[name="r"] {
     visibility: hidden;
 }
 
-
-/*@keyframes slideAnimation {
+/*
+@keyframes slideAnimation {
    0% {
     transform: translateX(0%);
    }
@@ -74,6 +75,10 @@ input[name="r"] {
    }
  }
 */
+
+.slide-line {
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
 
 #r1:checked ~ .slide-image > .slide-line {
     margin-left: 0;
@@ -113,3 +118,24 @@ input[name="r"] {
     opacity: 2;
     transform: scale(1.1);
 }
+
+
+
+/*Подпись к мему*/
+. {
+    width: 74rem;
+}
+    
+    .slide_texte { /*Текст*/
+        width: 30rem;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-left: 0;
+        margin-top: 0.9375rem;
+        color: #000;
+        font-family: Inter;
+        font-size: 1,25rem;
+     }
+
+
+     
