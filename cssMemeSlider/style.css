@@ -43,10 +43,11 @@ body {
 
 
 .slide {
+    display: flex;
     width: 40rem;
     height: 25rem;
     border-radius: 1.25rem;
-    display: flex;
+    
    
 }
 
@@ -159,12 +160,11 @@ background-color: aliceblue;
 
 @keyframes fade-in {
     0% {
-        /* transform: translateX(-100%); 
-        opacity: 0;*/
+        
     }
     100% {
         opacity: 1;
-        /* transform: translateX(0); */
+        
     }
     }
 
@@ -184,7 +184,6 @@ background-color: aliceblue;
     transition: all, .6s ease; 
     gap: 2rem;
     overflow: hidden;
-    
 }
 
 
@@ -194,8 +193,9 @@ background-color: aliceblue;
     font-size: 1rem;*/
     width: 10rem;
     font: normal 400 0.85rem/1rem Inter;
-
+    animation: 3s 1;
 }
+
 
 
 
@@ -203,17 +203,25 @@ background-color: aliceblue;
 
 #r1:checked ~ .bottom > .text > .all-text {
     margin-left: 0;
+    
+   
+}
+#r1:checked ~ .bottom >.text >.all-text  {
+    animation: fade-in 1.5s ease-in;
 }
 
 #r2:checked ~ .bottom >.text > .all-text{
     margin-left: -100%;
 }
+#r2:checked ~ .bottom >.text >.all-text  {
+    animation: fade-in 1.5s ease-in;
+}  
 
 #r3:checked ~ .bottom > .text > .all-text{
-    margin-left: -200%;
+    margin-left: -200%;   
 }
 
-#r3:checked ~ .bottom >:nth-child(3).text .all-text .slide_texte  {
+#r3:checked ~ .bottom >.text >.all-text  {
     animation: fade-in 1.5s ease-in;
 }
 
@@ -221,11 +229,19 @@ background-color: aliceblue;
     margin-left: -300%;
 }
 
-#r4:checked ~ .bottom >:nth-child(4).text .all-text .slide_texte  {
+#r4:checked ~ .bottom >.text >.all-text  {
     animation: fade-in 1.5s ease-in;
 }
 
-
+@keyframes fade-in {
+    0% {
+     
+    }
+    100% {
+        opacity: 1.5;
+       
+    }
+    }
 
 
 
