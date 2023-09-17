@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: blueviolet;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.slides {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    margin-top: 2.675rem;
+    
+}
+
+
+.slide-image { /*Окошко с одним слайдом*/
+    width: 40rem;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.slide-line {   /*Общий контейнер слайдов*/
+    width: 160rem;
+    display: flex;
+    margin: 0;
+    transition: 1s;
+}
+
+
+.slide {
+    display: flex;
+    width: 40rem;
+    height: 25rem;
+    border-radius: 1.25rem;
+    
+   
+}
+
+
+input[name="r"] {
+   
+ display: none;
+}
+
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    margin:0 auto;
+    width: 40rem;
+    
+}
+
+
+.slide-line {
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#r1:checked ~ .slide-image > .slide-line {
+    margin-left: 0;
+}
+
+#r1:checked ~ .slide-image > .slide-line:nth-child(1)  {
+    animation: fade-in 1.5s ease-in;
+}
+
+#r2:checked ~ .slide-image > .slide-line {
+    margin-left: -100%;
+}
+
+#r2:checked ~ .slide-image > .slide-line:nth-child(2)  {
+    animation:  1.5s ease-in;
+}
+
+
+#r3:checked ~ .slide-image > .slide-line {
+    margin-left: -200%;
+}
+
+#r3:checked ~ .slide-image > .slide-line:nth-child(3)  {
+    animation: fade-in 1.5s ease-in;
+}
+
+#r4:checked ~ .slide-image > .slide-line {
+    margin-left: -300%;
+}
+
+#r4:checked ~ .slide-image > .slide-line:nth-child(4)  {
+    animation: fade-in 1.5s ease-in;
+}
+
+
+/*Блок с кнопками*/
+
+.switch {  
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.switch-wrapper {    /*Обертка wrapper для увеличение области клика*/
+    display: flex; 
+    align-items: center;   
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+
+.switch-style {   /*Стиль для кнопок*/
+    height:1.25rem;
+    width: 1.25rem;
+    background-color: black;
+    border-radius: 50%;
+    transition: opacity 0.6s ease, scale 0.6s ease, background-color 0.6s ease;
+    display: block;
+    cursor: pointer;
+    margin:0;
+}
+
+
+.switch-style:hover{
+background-color: aliceblue;
+
+}
+
+
+#r1:checked ~ .bottom .switch .switch-wrapper:nth-child(1) .switch-style {
+    background-color: yellow;
+    opacity: 1;
+}
+#r2:checked ~ .bottom .switch .switch-wrapper:nth-child(2) .switch-style {
+    background-color: yellow;
+    opacity: 1;
+}
+#r3:checked ~ .bottom .switch .switch-wrapper:nth-child(3) .switch-style {
+    background-color: yellow;
+    opacity: 1;
+}
+#r4:checked ~ .bottom .switch .switch-wrapper:nth-child(4) .switch-style {
+    background-color: yellow;
+    opacity: 1;
+}
+
+
+@keyframes fade-in {
+    0% {
+        
+    }
+    100% {
+        opacity: 1;
+        
+    }
+    }
+
+
+                                  /*Подпись к мему*/
+
+.all-text {         /* Общий контейнер текста*/
+    display: flex;
+    width: 120rem;
+}
+
+
+.text {  /*Одно окошко*/
+    display: flex;
+    width: 10rem;
+    margin-top: 0;
+    transition: all, .6s ease; 
+    gap: 2rem;
+    overflow: hidden;
+}
+
+
+.slide_texte {         /*Текст*/
+    color: #000;
+   /* font-family: Inter;
+    font-size: 1rem;*/
+    width: 10rem;
+    font: normal 400 0.85rem/1rem Inter;
+    animation: 3s 1;
+}
+
+
+
+
+/*Анимация для текста*/
+
+#r1:checked ~ .bottom > .text > .all-text {
+    margin-left: 0;
+    
+   
+}
+#r1:checked ~ .bottom >.text >.all-text  {
+    animation: fade-in 1.5s ease-in;
+}
+
+#r2:checked ~ .bottom >.text > .all-text{
+    margin-left: -100%;
+}
+#r2:checked ~ .bottom >.text >.all-text  {
+    animation: fade-in 1.5s ease-in;
+}  
+
+#r3:checked ~ .bottom > .text > .all-text{
+    margin-left: -200%;   
+}
+
+#r3:checked ~ .bottom >.text >.all-text  {
+    animation: fade-in 1.5s ease-in;
+}
+
+#r4:checked ~ .bottom > .text >.all-text {
+    margin-left: -300%;
+}
+
+#r4:checked ~ .bottom >.text >.all-text  {
+    animation: fade-in 1.5s ease-in;
+}
+
+@keyframes fade-in {
+    0% {
+     
+    }
+    100% {
+        opacity: 1.5;
+       
+    }
+    }
+
+
+
+
